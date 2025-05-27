@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Университетский квест</title>
+</head>
+<body>
+    <!-- Main menu -->
+    <div id="main-menu" class="container">
+        <div class="heat-image"></div>
+
+        <div class="header">
+            <h1>Добро пожаловать<br>в университетский квест!</h1>
+            <p class="subtitle">7 станций — 7 шагов<br>к знаниям и адаптации в вузе.</p>
+        </div>
+        
+        <div class="station-buttons">
+            <button class="station-button active" id="station1-btn" onclick="openStation(1)">
+                <span class="front">
+                    <p>Станция 1</p>
+                </span>
+            </button>
+            <button class="station-button inactive" id="station2-btn" onclick="openStation(2)">
+                <span class="front inactive">
+                    <p>Станция 2</p>
+                </span>
+            </button>
+            <button class="station-button inactive" id="station3-btn" onclick="openStation(3)">
+                <span class="front inactive">
+                    <p>Станция 3</p>
+                </span>
+            </button>
+            <button class="station-button inactive" id="station4-btn" onclick="openStation(4)">
+                <span class="front inactive">
+                    <p>Станция 4</p>
+                </span>
+            </button>
+            <button class="station-button inactive" id="station5-btn" onclick="openStation(5)">
+                <span class="front inactive">
+                    <p>Станция 5</p>
+                </span>
+            </button>
+         </div>
+        
+        <div class="books-image"></div>
+    </div>
+    
+    <!-- Station 1 content -->
+    <div id="station-1" class="station-page">
+        <button class="back-button" onclick="goToMainMenu()">←</button>
+        
+        <h1 class="station-header">Станция 1</h1>
+        <h2 class="station-subtitle">Общежитие</h2>
+        <p class="station-quote">"Добро пожаловать домой!"</p>
+        
+        <div class="station-top-banner">
+            <span class="front">
+                <p>У нас есть три общежития: 5А, 5Б, 4.</p>
+                <p>Узнаешь, где ты будешь жить.</p>
+            </span>
+        </div>
+        
+        <p class="station-quote">Это карта нашего студгородка!</p>
+        
+        <div class="info-block-map">
+            <img src="./imgs/camp-map.png" alt="">
+        </div>
+        
+        <p class="station-quote">
+            <u><a href="https://t.me/kazgasu/1735" target="_blank">ПРО ЗАСЕЛЕНИЕ ЧИТАЙ ТУТ</a></u>
+        </p>
+        
+        <p style="padding-left: 10px; font-size: 14px; margin-bottom: 30px;">Все общежития находятся на одной объединённой территории, вход на которую осуществляется через КПП по пропускам(на карте ВХОД №3).</p>
+        
+        <div class="gift-box" onclick="changeInnerContent(this)">
+            <div class="gift-image"></div>
+            <p>Нажми, <br>чтобы получить совет</p>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Общежития 5А и 5Б</h3>
+        
+            <p>Общежития 5А и 5Б – это одно здание с двумя разными входами, находится по адресу Калинина, 19. В каждом общежитии есть прачечная на первом этаже. В общежитии 5А на первом этаже расположен читальный зал для комфортного обучения студентов всех общежитий.</p>
+            
+            <ul>
+                <li>В каждом общежитии есть левое и правое крыло</li>
+                <li>Блочная система, по 8 комнат (4 на два человека и 4 на три человека), большая душевая, два туалета и просторная кухня</li>
+                <li>Блоки мужские и женские, совмещённых нет</li>
+                <li>Вход строго по пропуску, гостям/родным при предъявлении документа и с разрешения вахтёра</li>
+                <li>С вопросами и проблемами можно обратиться к комендантам, кабинет которых находится на первом этаже 5А при входе</li>
+                <li>По вопросам заселения и размещения обращаться в администрацию студенческого городка, расположена внутри общежития 5Б, при входе.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Общежитие 4</h3>
+        
+            <p>Общежитие 4 – располагается по адресу Зелёная, 2. Считается общежитием повышенного комфорта, комнаты там больше и на каждые две комнаты свой санузел и душевая. Недавно на первом этаже открылся научно-образовательный центр Геология.</p>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Спортивный комплекс "Тозуче"</h3>
+        
+            <p>Спортивный комплекс включает в себя универсальный зал для игровых видов спорта, зал борьбы, аэробики, бокса, силовых видов спорта, зал настольного тенниса.</p>
+            
+            <div class="fingerprint-card" onclick="changeInnerContent(this)">
+                <div class="fingerprint-image"></div>
+                <p>Палец сюда</p>
+            </div>            
+            <img src="./imgs/sport-camp.png" alt="Спортивный комплекс Тозуче" class="building-photo">
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Контактная информация по студгородку</h3>
+        
+            <div class="contact-card" onclick="changeInnerContent(this)">
+                <div class="contact-image"></div>
+            </div>         
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Про Wi-Fi</h3>
+        
+            <div class="wifi-section">
+                <div class="icon-wifi"><img src="./imgs/wifi.png" alt=""></div>
+                <p>В общежитиях КГАСУ имеется бесплатный Wi-Fi, доступ к которому после заселения можно получить, <b>отправив письмо на почту support@kgasu.ru с фотографией студенческого билета.</b></p>
+            </div>
+        </div>
+        
+        <h1 class="station-header">Молодец!</h1>
+        <h2 class="station-subtitle">Ты прошел квест с первой станцией и познакомился с инфраструктурой студгородка, так держать!</h2>
+    
+        <div class="section opened-gift">
+            <div class="icon-opened-gift">
+                <a href="https://t.me/addstickers/ArhiZhorik" target="_blank">
+                    <img src="./imgs/opened-gift.png" alt="">
+                </a>
+            </div>
+            <p><b>НАЖМИ</b> НА ПОДАРОК</p>
+        </div>
+
+        <h1 class="station-footer">Можешь смело переходить к станции 2</h1>
+        
+        <div class="next-buttons">
+            <button class="next-button" onclick="completeStation(1)">
+                <span class="front">
+                    <p>К следующей станции</p>
+                </span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Station 2 content -->
+    <div id="station-2" class="station-page">
+        <button class="back-button" onclick="goToMainMenu()">←</button>
+        
+        <h1 class="station-header">Станция 2</h1>
+        <h2 class="station-subtitle">Общежитие</h2>
+        
+        <div class="station-top-banner" style="margin-top: 20px;">
+            <span class="front">
+                <p>Узнаешь, где находится каждый корпус и где смотреть расписание.</p>
+            </span>
+        </div>
+
+        <div class="info-block-map">
+            <img src="./imgs/camp-map2.png" alt="">
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Общежития 5А и 5Б</h3>
+            <p>4 из них находятся на основной территории университета и 1 корпус расположен на территории студгородка, возле общежития №4.<br><br>Корпуса, с первого по четвертый, связаны друг с другом, а значит переходить из одного корпуса в другой можно, не выходя на улицу.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Немного про каждый корпус</h3>
+
+            <div class="section-accordion">
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="title">Корпус 1</span>
+                        <span class="icon">
+                            <img class="icon-plus" src="./imgs/plus.png" width="20" height="20" alt="">
+                            <img class="icon-minus" src="./imgs/minus.png" width="20" height="10" alt="">
+                        </span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p><strong>Первый корпус:</strong> самый старый из всех корпусов, но не менее красивый. Большие лекционные аудитории, залы для конференций и приёма гостей, лабораторные и практические аудитории, а также целая система подвальных ходов для перемещения.</p>
+                            <p><strong>Переход из первого корпуса во второй</strong> находится на первом этаже, все переходы помечены соответствующей табличкой.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="title">Корпус 2</span>
+                        <span class="icon">
+                            <img class="icon-plus" src="./imgs/plus.png" width="20" height="20" alt="">
+                            <img class="icon-minus" src="./imgs/minus.png" width="20" height="10" alt="">
+                        </span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p><strong>Второй корпус:</strong> расположен напротив столовой и котельной. Удобный корпус с гардеробной в подвальном этаже, автоматами со снэками и напитками на первом этаже, а также с недавних пор с кофейней Kezun. В этом 4-этажном корпусе расположены читальный зал «Китап» и библиотека с учебной и художественной литературой.</p>
+                            <p><strong>Переход из второго корпуса в третий</strong> находится на втором этаже.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="title">Корпус 3</span>
+                        <span class="icon">
+                            <img class="icon-plus" src="./imgs/plus.png" width="20" height="20" alt="">
+                            <img class="icon-minus" src="./imgs/minus.png" width="20" height="10" alt="">
+                        </span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p><strong>Третий корпус:</strong> один из самых интересных и наполненных корпусов КГАСУ. На первом этаже – гардеробная, читальный зал «15» или как её называют «Пятнашка», буфет и автоматы с кофе и едой. На втором этаже – учебные аудитории, комната студенческого совета и кабинеты проректора и ректора. На третьем этаже – технологический центр «Цифра», созданный для обучающихся на направлении «Информационные системы и технологии». На четвёртом этаже – центр «Urban» для градостроителей и архитекторов.</p>
+                            <p><strong>Переход из третьего корпуса в четвёртый</strong> находится на третьем этаже.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span class="title">Корпус 4</span>
+                        <span class="icon">
+                            <img class="icon-plus" src="./imgs/plus.png" width="20" height="20" alt="">
+                            <img class="icon-minus" src="./imgs/minus.png" width="20" height="10" alt="">
+                        </span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p><strong>Четвертый корпус:</strong> место, где чаще всего вы можете встретить архитекторов. Здесь расположен научно-образовательный центр архитектурной реставрации «Наследие».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Как понимать где находится аудитория</h3>
+
+            <div class="section-audience">
+                <p>Код аудитории обычно записывается в виде X-YYY, где:</p>
+                <ul>
+                    <li><strong>X — номер корпуса (здания).</strong></li>
+                    <li><strong>YYY — номер аудитории.</strong></li>
+                </ul>
+
+                <h4>1. Корпус</h2>
+                <p>Первая цифра перед тире указывает, в каком корпусе находится аудитория.<br>Например:</p>
+                <div class="example">
+                    <ul>
+                        <li>1-101 → 1 корпус</li>
+                        <li>2-211 → 2 корпус</li>
+                    </ul>
+                </div>
+
+                <h4>2. Этаж</h2>
+                <p>Первая цифра после тире (то есть первой цифры в номере аудитории) указывает, на каком этаже находится аудитория.<br>Например:</p>
+                <div class="example">
+                    <ul>
+                        <li>101 → 1 этаж</li>
+                        <li>211 → 2 этаж</li>
+                        <li>305 → 3 этаж</li>
+                    </ul>
+                </div>
+
+                <h4>3. Номер аудитории</h2>
+                <p>Остальные цифры просто обозначают саму аудиторию на этом этаже.<br>Примеры:</p>
+                <div class="example">
+                    <ul>
+                        <li>1-102 → 1 корпус, 1 этаж, аудитория 102</li>
+                        <li>2-318 → 2 корпус, 3 этаж, аудитория 318</li>
+                        <li>3-204 → 3 корпус, 2 этаж, аудитория 204</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title">Ты стоишь перед корпусами.<br>Внутри лабиринт этажей, аудиторий и кафе.<br>Пора научиться ориентироваться!</h3>
+
+            <div class="station-top-banner quiz" style="margin-top: 20px;">
+                <span class="front">
+                    <p><strong>Задание:</strong> Найди, где проходит пара с кодом 2-211.</p>
+                    <div class="quiz-options">
+                        <div>
+                            <input type="radio" name="ask1" id="ask1">
+                            <label for="ask1">1 этаж, аудитория 201</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="ask2" id="ask2">
+                            <label for="ask2">2 этаж, аудитория 11</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="ask3" id="ask3">
+                            <label for="ask3">2 корпус, 2 этаж, аудитория 211</label>
+                        </div>
+                    </div>
+                    <div class="quiz-access">
+                        <p><strong>Молодец!</strong> Код 2-211 расшифровывается следующим образом:<br>Первая цифра 2 — это номер корпуса, значит пара проходит во втором корпусе.<br>После тире указано 211 — это номер аудитории.<br>Аудитория 211 находится на втором этаже, потому что первая цифра номера аудитории (2) указывает на этаж.</p>
+                    </div>
+                    <div class="quiz-denied">
+                        <p><strong>Неправильно.</strong> Изучи информацию выше и попробуй еще раз!</p>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Первая пара через 5 минут, а ты ещё не в курсе где?</h3>
+
+            <div class="station-top-banner quiz" style="margin-top: 20px;">
+                <span class="front">
+                    <p>Не паникуй! Сейчас покажу, как за 2 клика найти своё расписание на <strong><a href="https://www.kgasu.ru/student/raspisanie-zanyatiy/" target="_blank" style="text-decoration: none; color: black;">сайте.</a></strong></p>
+                </span>
+            </div>
+        </div>
+        
+        <h1 class="station-header">Молодец!</h1>
+        <h2 class="station-subtitle">Ты прошел квест с первой станцией и познакомился с инфраструктурой студгородка, так держать!</h2>
+    
+        <div class="section opened-gift station2-gift" onclick="changeInnerContent(this)">
+            <div class="icon-opened-gift">
+                <img src="./imgs/opened-gift.png" alt="">
+            </div>
+            <p><b>НАЖМИ</b> НА ПОДАРОК</p>
+        </div>
+
+        <h1 class="station-footer">Можешь смело переходить к станции 3</h1>
+        
+        <div class="next-buttons">
+            <button class="next-button" onclick="completeStation(2)">
+                <span class="front">
+                    <p>К следующей станции</p>
+                </span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Station 3 content -->
+    <div id="station-3" class="station-page">
+        <button class="back-button" onclick="goToMainMenu()">←</button>
+        
+        <h1 class="station-header">Станция 3</h1>
+        <h2 class="station-subtitle">Столовая<br>"Голод — не тётка"</h2>
+        
+        <div class="station-top-banner" style="margin-top: 20px;">
+            <span class="front">
+                <p>От бюджетных обедов в столовой до уютных кафешек — ловите обзор мест, где голод студента сдаётся без боя.</p>
+            </span>
+        </div>
+
+        <div class="section">
+            
+            <h3 class="section-title">Начнем со столовой нашего университета!</h3>
+            <h4 class="section-subtitle">«Тут еда дешевле конспектов, а порции больше, чем домашние задания.»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Столовая расположена в университете <strong>во втором корпусе на втором этаже.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/1246881881" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>в будни с 07.50 до 16.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container"  data-slider="slider1">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide1-1.png')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide1-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide1-3.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide1-4.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+
+            <p>Есть комплексные обеды. После 15.00 действует скидка. Для быстрого перекуса работает буфет на первом этаже третьего корпуса.</p>
+        </div>
+
+        <div class="section">
+            
+            <h3 class="section-title">Кофейня Kezun Coffee and Tea!</h3>
+            <h4 class="section-subtitle">«Кофейня в корпусе: кофе между парами без пробежек по городу.»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Кофейня расположена прямо в университете <strong>во втором корпусе на первом этаже.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/104821528073" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>в будни с 07.50 до 19.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide2-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide2-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide2-3.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide2-4.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            
+            <h3 class="section-title">Пекарня Жар Свежар</h3>
+            <h4 class="section-subtitle">«Через дорогу от универа: тут булочки бегут к вам быстрее, чем вы — на пары.»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Пекарня расположена прямо <strong>напротив университета от ВХОДА №1.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/105030766996" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>ежедневно с 07.00 до 21.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide3-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide3-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide3-3.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide3-4.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            
+            <h3 class="section-title">Кофейня Coffee Teen</h3>
+            <h4 class="section-subtitle">«Для тех, кому кофе в университете пришёлся не по вкусу.»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Кофейня расположена прямо <strong>напротив университета от ВХОДА №1.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/98113675151" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>ежедневно с 07.00 до 21.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide4-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide4-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide4-3.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide4-4.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            
+            <h3 class="section-title">Магазин Малинка</h3>
+            <h4 class="section-subtitle">«Магазин со всем, что нужно, в том числе и быстрым перекусом, а также вкусной пиццей.»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Магазин расположен также <strong>напротив университета рядом с Жар-Свежаром.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/70757958187" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>ежедневно с 10.00 до 23.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide6-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide6-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide6-3.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            
+            <h3 class="section-title">Суши-бар Окинава</h3>
+            <h4 class="section-subtitle">«Кто предпочитает азиатскую кухню и не жалеет стипендию.»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Суши-бар расположен также <strong>напротив университета рядом с кофейней Coffee Teen.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/178030286364" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>ежедневно с 10.00 до 23.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide5-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide5-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide5-3.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            
+            <h3 class="section-title">Добрая столовая</h3>
+            <h4 class="section-subtitle">«Здесь борщ лечит тоску по дому, а порции измеряются «бабушкиной любовью».»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Столовая расположена в 5 минутах от универа, <strong>от ВХОДА №1 в левую сторону.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/71362045281" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">В будни <strong>с 7.30 до 21:00</strong><br>В выходные <strong>с 08.00 до 21.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide7-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide7-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide7-3.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide7-4.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            
+            <h3 class="section-title">Кофейня Coffee Dream</h3>
+            <h4 class="section-subtitle">«Да, это не бюджетно — зато можно хвастаться в инсте, что вы «не просто студент, а ценитель».»</h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Кофейня расположена в 2 минутах от универа, от <strong>ВХОДА №1 в левую сторону.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/124423090265" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">В будни <strong>с 7.30 до 21:00</strong><br>В выходные <strong>с 09.00 до 21.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide8-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide8-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide8-3.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide8-4.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            
+            <h3 class="section-title">ЛяШаурма</h3>
+            <h4 class="section-subtitle">«Шаурма, которая за 5 минут спасает от голода, сессии и мыслей «бросить всё». </h4>
+
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">ЛяШаурма расположена в 2 минутах от универа, <strong>от ВХОДА №2 прямо.</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/86657364973" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>круглосуточно</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="">
+            </div>
+
+            <div class="slider-container" data-slider="slider2">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide9-1.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide9-2.jpg')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide9-3.jpg')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <h1 class="station-header">Молодец!</h1>
+        <h2 class="station-subtitle">Ты прошел квест с первой станцией и познакомился с инфраструктурой студгородка, так держать!</h2>
+    
+        <div class="section opened-gift station3-gift" onclick="changeInnerContent(this)">
+            <div class="icon-opened-gift">
+                <img src="./imgs/opened-gift.png" alt="">
+            </div>
+            <p><b>НАЖМИ</b> НА ПОДАРОК</p>
+        </div>
+
+        <h1 class="station-footer">Можешь смело переходить к станции 4</h1>
+        
+        <div class="next-buttons">
+            <button class="next-button" onclick="completeStation(3)">
+                <span class="front">
+                    <p>К следующей станции</p>
+                </span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Station 4 content -->
+    <div id="station-4" class="station-page">
+        <button class="back-button" onclick="goToMainMenu()">← Назад к меню</button>
+        
+        <h1 class="station-header">Станция 4</h1>
+        <h2 class="station-subtitle">Студенческая жизнь</h2>
+        <p class="station-quote">"Студенчество - лучшие годы!"</p>
+        
+        <p>Здесь вы узнаете о внеучебной деятельности и студенческой жизни.</p>
+        
+        <!-- Содержимое станции 4 будет добавлено позже -->
+        
+        <h1 class="congrats">Молодец!</h1>
+        <p class="station-quote">Ты прошел четвертую станцию и узнал о студенческой жизни!</p>
+        
+        <p class="station-subtitle">Можешь смело переходить к станции 5</p>
+        
+        <button class="next-button" onclick="completeStation(4)">К следующей станции</button>
+    </div>
+    
+    <!-- Station 5 content -->
+    <div id="station-5" class="station-page">
+        <button class="back-button" onclick="goToMainMenu()">← Назад к меню</button>
+        
+        <h1 class="station-header">Станция 5</h1>
+        <h2 class="station-subtitle">Стипендии и материальная поддержка</h2>
+        <p class="station-quote">"Учись хорошо - получай стипендию!"</p>
+        
+        <p>Здесь вы узнаете о стипендиях и материальной поддержке студентов.</p>
+        
+        <!-- Содержимое станции 5 будет добавлено позже -->
+        
+        <h1 class="congrats">Молодец!</h1>
+        <p class="station-quote">Ты прошел пятую станцию и узнал о стипендиях и материальной поддержке!</p>
+        
+        <p class="station-subtitle">Можешь смело переходить к станции 6</p>
+        
+        <button class="next-button" onclick="completeStation(5)">К следующей станции</button>
+    </div>
+
+
+    <button onclick="window.location.href='/game'">Перейти к игре</button>
+
+    <script>
+
+        // Store completed stations
+        let completedStations = [1]; // Station 1 is available by default
+        let currentStation = null;
+        
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load progress from localStorage if available
+            if (localStorage.getItem('completedStations')) {
+                completedStations = JSON.parse(localStorage.getItem('completedStations'));
+                updateStationButtons();
+            }
+
+            // Получаем все элементы управления
+            const quizOptions = document.querySelector('.quiz-options');
+            const quizAccess = document.querySelector('.quiz-access');
+            const quizDenied = document.querySelector('.quiz-denied');
+            
+            // Изначально скрываем сообщения о результате
+            quizAccess.style.display = 'none';
+            quizDenied.style.display = 'none';
+            
+            // Добавляем обработчики для каждой радиокнопки
+            document.getElementById('ask1').addEventListener('change', checkAnswer);
+            document.getElementById('ask2').addEventListener('change', checkAnswer);
+            document.getElementById('ask3').addEventListener('change', checkAnswer);
+            
+            function checkAnswer() {
+                // Проверяем, выбран ли правильный ответ (третий вариант)
+                if (this.id === 'ask3' && this.checked) {
+                    // Показываем сообщение об успехе
+                    quizOptions.style.display = 'none';
+                    quizAccess.style.display = 'block';
+                    quizDenied.style.display = 'none';
+                } else if (this.checked) {
+                    // Показываем сообщение об ошибке
+                    quizOptions.style.display = 'none';
+                    quizAccess.style.display = 'none';
+                    quizDenied.style.display = 'block';
+                    
+                    // Через 5 секунд возвращаем варианты ответов
+                    setTimeout(function() {
+                        quizOptions.style.display = 'block';
+                        quizDenied.style.display = 'none';
+                        
+                        // Сбрасываем выбор
+                        document.getElementById('ask1').checked = false;
+                        document.getElementById('ask2').checked = false;
+                        document.getElementById('ask3').checked = false;
+                    }, 5000);
+                }
+            }
+            
+            // Initialize Telegram WebApp if available
+            if (window.Telegram && window.Telegram.WebApp) {
+                const webApp = window.Telegram.WebApp;
+                webApp.ready();
+                webApp.expand();
+            }
+
+
+        });
+
+        document.querySelectorAll('[data-slider]').forEach(sliderContainer => {
+            const slider = sliderContainer.querySelector('.slider');
+            const slides = sliderContainer.querySelector('.slides');
+            const prevBtn = sliderContainer.querySelector('.prev');
+            const nextBtn = sliderContainer.querySelector('.next');
+            const slideItems = sliderContainer.querySelectorAll('.slide');
+            let currentIndex = 0;
+
+            function goToSlide(index) {
+                if (index < 0) index = slideItems.length - 1;
+                else if (index >= slideItems.length) index = 0;
+                
+                currentIndex = index;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+        });
+        
+        // Open a specific station
+        function openStation(stationNumber) {
+
+            if (!completedStations.includes(stationNumber)) {
+                return;
+            }
+
+            // Hide main menu
+            document.getElementById('main-menu').style.display = 'none';
+            
+            // Hide all station contents
+            const stationPages = document.querySelectorAll('.station-page');
+            stationPages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected station content
+            const stationPage = document.getElementById(`station-${stationNumber}`);
+            stationPage.classList.add('active');
+            
+            currentStation = stationNumber;
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function changeInnerContent(element) {
+            if (element.className == 'gift-box') {
+                element.innerHTML = `
+                    <p class="title">🚗 Въезд: вахтёрша → КПП → вуаля! 🎟️</p>
+                    <p class="content">При заселениии или другом случае, когда нужно тащить много вещей, на территорию студгородка можно заехать на машине. Для этого <b>необходимо взять специальный пропуск у вахтёрши своего общежития и отнести охраннику на КПП.</b></p>
+                `
+            }
+            if (element.className == 'fingerprint-card') {
+                element.innerHTML = `
+                    <div class="medical-image"></div>
+                    <p><b>Важно:</b> также в Тозуче есть медпункт. Обязательно обращайся туда при проблемах со здоровьем!</p>
+                `
+            }
+
+            if (element.className == 'contact-card') {
+                element.innerHTML = `
+                    <div class="contact-content">
+                        <div class="contact-row">
+                            <div class="icon-placeholder"><img src="./imgs/map-point.png" alt=""></div>
+                            <div class="contact-text">г. Казань, ул. Калинина, 19, корпус 9</div>
+                        </div>
+                        
+                        <div class="contact-row">
+                            <div class="icon-placeholder"><img src="./imgs/phone.png" alt=""></div>
+                            <div class="phones-container">
+                                <div>
+                                    <a href="tel:+78435104765" class="phone-link">+7 (843) 510-47-65</a>
+                                </div>
+                                <div>
+                                    <a href="tel:+78435104767" class="phone-link">+7 (843) 510-47-67</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+            
+            if (element.className.includes('station2-gift')) {
+                element.innerHTML = `
+                    <div class="social-block">
+                        <div class="social-title">Ссылки на соц. сети<br>нашего университета</div>
+                        
+                        <a href="http://www.kgasu.ru/" target="_blank" class="social-link">
+                            <div class="social-icon"><img src="./imgs/earth.png" alt=""></div>
+                            <span>Сайт КГАСУ</span>
+                        </a>
+                        
+                        <a href="https://t.me/kazgasu" target="_blank" class="social-link">
+                            <div class="social-icon"><img src="./imgs/tg.png" alt=""></div>
+                            <span>КГАСУ в Telegram</span>
+                        </a>
+                        
+                        <a href="https://vk.com/ksuae" target="_blank" class="social-link">
+                            <div class="social-icon"><img src="./imgs/vk.png" alt=""></div>
+                            <span>КГАСУ в VK</span>
+                        </a>
+                        
+                        <a href="https://t.me/NIZAMOV_RK" target="_blank" class="social-link">
+                            <div class="social-icon"><img src="./imgs/contact.png" alt=""></div>
+                            <span>Telegram-канал ректора</span>
+                        </a>
+                    </div>
+                `
+            }
+
+            if (element.className.includes('station3-gift')) {
+                element.innerHTML = `
+                    <div class="receipt">
+                        <div class="receipt-title">Рецепт жареных пельменей. Когда варёные уже надоели, а сессия не ждёт.</div>
+                        <a href="https://www.russianfood.com/recipes/recipe.php?rid=172763" target="_blank">ЛОВИ РЕЦЕПТ!</a>   
+                        <div class="receipt-image">
+                            <img src="./imgs/receipt.png" alt="">    
+                        </div> 
+                    </div>
+                `
+            }
+        }
+        
+        // Go back to main menu
+        function goToMainMenu() {
+            // Hide all station contents
+            const stationPages = document.querySelectorAll('.station-page');
+            stationPages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show main menu
+            document.getElementById('main-menu').style.display = 'flex';
+            
+            // Update station buttons
+            updateStationButtons();
+            
+            currentStation = null;
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Complete a station and unlock the next one
+        function completeStation(stationNumber) {
+            // Add next station to completed stations if not already there
+            if (!completedStations.includes(stationNumber + 1)) {
+                completedStations.push(stationNumber + 1);
+                saveProgress();
+            }
+            
+            // Open next station
+            openStation(stationNumber + 1);
+        }
+        
+        // Update station buttons based on completed stations
+        function updateStationButtons() {
+            for (let i = 2; i <= 5; i++) {
+                const button = document.getElementById(`station${i}-btn`);
+                const span = button.querySelector('.front');
+                if (completedStations.includes(i)) {
+                    button.classList.remove('inactive');
+                    button.classList.add('active');
+                    button.disabled = false;
+
+                    span.classList.remove('inactive');
+                    span.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                    button.classList.add('inactive');
+                    button.disabled = true;
+
+                    span.classList.remove('active');
+                    span.classList.add('inactive');
+                }
+            }
+        }
+        
+        // Complete the quest
+        function completeQuest() {
+            alert('Поздравляем! Вы успешно прошли все станции университетского квеста!');
+            goToMainMenu();
+        }
+        
+        // Save progress to localStorage
+        function saveProgress() {
+            if (typeof localStorage !== 'undefined') {
+                localStorage.setItem('completedStations', JSON.stringify(completedStations));
+            }
+            updateStationButtons();
+        }
+    </script>
+</body>
+</html>

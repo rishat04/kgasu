@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    /* background-color: #FFDDBB; */
+    background-image: linear-gradient(#FFDCC0, #FFFFFF);
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+@font-face { font-family: KZ Supercell-Magic; src: url('../fonts/KZ Supercell-Magic.ttf'); } 
+
+@font-face { font-family: RuneScape-ENA; src: url('../fonts/RuneScape-ENA.ttf'); } 
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.header h1 {
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.header .subtitle {
+    font-family: RuneScape-ENA;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+h1 {
+    color: #FF5722;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.station-buttons, .next-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.station-button, .next-button {
+    border-radius: 45px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    margin-bottom: 5px;
+}
+
+.station-button .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 45px;
+    font-size: 1.25rem;
+    color: white;
+    transform: translateY(-6px);
+    background: #FF601C;
+    padding: 20px 0;
+}
+
+.station-button .front p {
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.next-button {
+    background-color: #C83C00;
+    margin-top: 40px;
+}
+
+.next-button .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 45px;
+    font-size: 1.25rem;
+    color: white;
+    transform: translateY(-6px);
+    background: #FF601C;
+    padding: 20px 0;
+}
+
+.next-button .front p {
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0%;
+    font-size: 15px;
+}
+
+.station-top-banner .front p {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.front.inactive {
+    background: #BEBEBE;
+}
+
+.station-button:active .front {
+    transform: translateY(-2px);
+}
+
+.station-button.active {
+    background-color: #C83C00;
+}
+
+.station-button.inactive {
+    background-color: #7D7D7D;
+    cursor: not-allowed;
+}
+
+.books-image {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url('../imgs/books.png');
+    background-size: cover;
+}
+
+.heat-image {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background-image: url('../imgs/heat.png');
+    background-size: cover;
+    transform: rotate(15deg);
+}
+
+/* Station content styles */
+.station-page {
+    display: none;
+    padding: 20px 0;
+}
+
+.station-page.active {
+    display: block;
+}
+
+.station-header {
+    color: #FF5722;
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.station-footer {
+    color: #000;
+    margin-top: 40px;
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.station-subtitle {
+    font-family: RuneScape-ENA;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.station-quote {
+    font-family: RuneScape-ENA;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.station-quote a {
+    color: #000;
+    font-family: KZ Supercell-Magic;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.station-top-banner {
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    margin-bottom: 35px;
+    background: #CBCBCB;
+}
+
+.station-top-banner .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: black;
+    transform: translateY(-6px);
+    background: #fff;
+    padding: 20px 0;
+
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+
+}
+
+.gift-box {
+    background-color: white;
+    border: #000 1px solid;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.gift-image {
+    background-image: url('../imgs/gift.png');
+    background-size: cover;
+    width: 43px;
+    height: 43px;
+    margin: auto;
+}
+
+.gift-box p {
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(255, 97, 19, 1);
+    text-align: center;
+    line-height: 22px;
+    margin: 10px;
+}
+
+.gift-box .title {
+    color: #000;
+    font-size: 14px;
+}
+
+.gift-box .content {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #000;
+}
+
+.info-card {
+    background-color: #E3F2FD;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.info-card-title {
+    color: #1565C0;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.wifi-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wifi-section p {
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.icon-wifi {
+    width: 150%;
+}
+
+.icon-wifi img {
+    width: 100%;
+    height: 100%;
+}
+
+.opened-gift {
+    border: rgba(255, 97, 19, 1) solid 2px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.opened-gift p {
+    text-align: center !important;
+}
+
+.icon-opened-gift {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    animation: tilt-shaking 0.4s infinite;
+}
+
+.icon-opened-gift img {
+    width: 150px;
+    margin: auto;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.back-button {
+    background-color: #BBBBBB;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #999999;
+}
+
+.building-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.building-item {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.building-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.section {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.section .section-title {
+    color: #000;
+    margin: 20px 0 10px;
+    font-family: RuneScape-ENA;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.section .section-subtitle {
+    color: rgba(255, 97, 19, 1);
+
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.section p {
+    padding: 10px;
+    font-family: Montserrat;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.section ul {
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.section ul li {
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.fingerprint-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.fingerprint-image {
+    background: url('../imgs/fingerprint.png');
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.fingerprint-card .medical-image {
+    background: url('../imgs/medical.png');
+    background-size: cover;
+    width: 130px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.medical-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-card .contact-image {
+    background: url("../imgs/mail.png");
+    background-size: cover;
+    width: 212px;
+    height: 137px;
+    margin: 20px auto;
+}
+
+.contact-card .contact-content{
+    background: rgba(248, 206, 59, 1);
+    border-radius: 8px;
+    border: #000 solid 2px;
+    padding: 15px;
+
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.contact-row:last-child {
+    margin-bottom: 0;
+}
+
+.icon-placeholder {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.icon-placeholder img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-text {
+    font-size: 15px;
+    line-height: 2.5;
+    color: #000;
+}
+
+.phone-link {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+}
+
+.phones-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.building-photo {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.gift-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.gift-section img {
+    width: 80px;
+    height: 80px;
+}
+
+.info-block-map {
+    text-align: center;
+}
+
+.info-block-map img {
+    width: 300px;
+    height: 300px;
+    border: #7D0E0E 2px solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+
+.accordion {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.accordion-header {
+    background-color: rgba(255, 97, 19, 1);
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.accordion-header .icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.accordion-header .title {
+    margin: auto;
+
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #fff;
+}
+
+.accordion-content-inner {
+    padding: 20px;
+}
+
+.accordion-content-inner p {
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.accordion.active .accordion-header .icon {
+    transform: rotate(0deg);
+}
+
+.accordion.active .accordion-content {
+    max-height: 1000px;
+}
+
+.icon-plus, .icon-minus {
+    display: none;
+    line-height: 20;
+}
+
+.accordion:not(.active) .icon-plus {
+    display: block;
+}
+
+.accordion.active .icon-minus {
+    display: block;
+    margin-top: 5px;
+}
+
+.section-audience {
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.quiz .front p {
+    font-size: 20px !important;
+    line-height: 20px;
+}
+
+.quiz .quiz-options {
+    padding-left: 15px;
+}
+
+.quiz .quiz-options input {
+    margin-top: 15px;
+}
+
+.social-block {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+}
+.social-block span {
+    font-family: Montserrat;
+}
+.social-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: KZ Supercell-Magic;
+    font-size: 15px;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #000;
+}
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.social-icon img {
+    width: 100%;
+}
+
+.info-block {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 1.6em auto;
+}
+.info-block .info-row {
+    display: flex;
+    align-items: center;
+}
+.info-block .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-block .info-text {
+    line-height: 1.4;
+}
+.info-block .map-link {
+    display: flex;
+    align-items: center; 
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.info-block .map-link .red-text {
+  color: rgba(231, 76, 60, 1);  
+}
+.info-block .hours {
+    font-size: 0.9em;
+}
+.info-block .clip-img {
+    position: absolute;
+    width: 40px;
+    top: 3.5em;
+    right: 0;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin: 20px auto;
+    position: relative;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+.slide {
+    min-width: 100%;
+    height: 200px;
+    position: relative;
+    background-size: cover;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.prev {
+    margin-right: 10px;
+}
+
+.next {
+    margin-left: 10px;
+}
+
+.receipt {
+    width: 100%;
+    text-align: center;
+}
+
+.receipt a {
+    text-decoration: none;
+    text-decoration: underline;
+    color: rgba(255, 97, 19, 1);
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.receipt-title {
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 10px;
+    margin: 10px;
+    line-height: 15px;
+}
+
+.receipt-image {
+    width: 80%;
+    margin: auto;
+}
+
+.receipt-image img {
+    width: 100% ;
+    border-radius: 10px;
+    margin: 10px 0;
+}
