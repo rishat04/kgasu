@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const opn = require('opn')
+// const opn = require('opn')
 
 const server = express()
 const host = 'http://localhost:8082'
@@ -20,5 +20,5 @@ server.get('/', (req, res) => {
 
 server.listen(8082, () => {
   console.log(`server started at ${host}`)
-  opn(host)
+  // opn(host)
 })
