@@ -42,6 +42,12 @@
                     <p>Станция 5</p>
                 </span>
             </button>
+            
+            <button class="station-button inactive" id="station6-btn" onclick="window.location.href='/game'">
+                <span class="front inactive">
+                    <p>ПЕРЕЙТИ К ИГРЕ!</p>
+                </span>
+            </button>
          </div>
         
         <div class="books-image"></div>
@@ -921,7 +927,7 @@
             </p>
         </div>
 
-        <div class="section">
+        <div class="section" style="margin-top: 70px;">
             <h3 class="section-title">Канцтовары: мастхэв для учебы</h3>
 
             <div class="info-block">
@@ -1178,7 +1184,7 @@
         <h1 class="station-footer">Ого! Все станции пройдены!</h1>
         
         <div class="next-buttons">
-            <button class="next-button" onclick="window.location.href='/game'">
+            <button class="next-button" onclick="openGame()">
                 <span class="front">
                     <p>ПЕРЕЙТИ К ИГРЕ</p>
                 </span>
@@ -1193,6 +1199,13 @@
         let completedStations = [1]; // Station 1 is available by default
         let currentStation = null;
         
+        function openGame() {
+            completedStations.push(6);
+            saveProgress();
+
+            window.location.href='/game';
+        }
+
         // Initialize the app
         document.addEventListener('DOMContentLoaded', function() {
             // Load progress from localStorage if available
@@ -1446,7 +1459,7 @@
         
         // Update station buttons based on completed stations
         function updateStationButtons() {
-            for (let i = 2; i <= 5; i++) {
+            for (let i = 2; i <= 6; i++) {
                 const button = document.getElementById(`station${i}-btn`);
                 const span = button.querySelector('.front');
                 if (completedStations.includes(i)) {
