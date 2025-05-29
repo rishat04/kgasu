@@ -255,6 +255,12 @@ h1 {
 
 }
 
+.monserat {
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+}
+
 .gift-box {
     background-color: white;
     border: #000 1px solid;
@@ -275,8 +281,6 @@ h1 {
     font-family: KZ Supercell-Magic;
     font-weight: 800;
     font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0%;
     color: rgba(255, 97, 19, 1);
     text-align: center;
     line-height: 22px;
@@ -296,6 +300,39 @@ h1 {
     letter-spacing: 0%;
     text-align: justify;
     color: #000;
+}
+
+.fact {
+    background-color: white;
+    border: #000 1px solid;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.fact .title {
+    color: #000;
+    font-size: 14px;
+}
+
+.fact .content {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #000;
+}
+
+.fact p {
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 15px;
+    color: rgba(255, 97, 19, 1);
+    text-align: center;
+    line-height: 22px;
+    margin: 10px;
 }
 
 .info-card {
@@ -408,6 +445,16 @@ h1 {
     font-size: 15px;
     margin-top: 50px;
     position: relative;
+}
+
+.section-image {
+    width: 90%;
+    margin: auto;
+}
+
+.section-image img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .section .section-title {
@@ -831,4 +878,160 @@ li {
     width: 100% ;
     border-radius: 10px;
     margin: 10px 0;
+}
+
+
+.fact {
+    border: #000 solid 2px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.fact p {
+    text-align: center !important;
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 15px;
+    color: rgba(255, 97, 19, 1);
+}
+
+.icon-fact {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.fact img {
+    width: 170px;
+}
+
+.lib-about-container {
+    display: flex;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+.lib-about-container .images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+    width: 100px;
+    margin-top: 15px;
+}
+.lib-about-container .image {
+    width: 100%;
+    height: 80px;
+    background-color: #eee;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.lib-about-container .text {
+    flex-grow: 1;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.image-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image-row img {
+    width: 50%; 
+    border-radius: 12px; 
+    object-fit: cover;
+    aspect-ratio: 4/3; 
+}
+
+.copy {
+    width: 100%;
+    text-align: center;
+}
+
+.copy a {
+    text-decoration: none;
+    color:#000;
+    
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.copy ul {    
+    display: inline-block;
+}
+
+.copy-title {
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    font-size: 10px;
+    margin: 10px;
+    line-height: 15px;
+    
+}
+
+.squad-card {
+    width: 100%;
+}
+.squad-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.squad-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.squad-description {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.squad-card .squad-link {
+    display: flex;
+    align-items: center;
+    color: #0066cc;
+    text-decoration: none;
+}
+.squad-card .link-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+    border-radius: 2px;
+}
+.squad-card .link-text {
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: KZ Supercell-Magic;
+    font-weight: 800;
+    line-height: 100%;
+    color: rgba(255, 97, 19, 1);
+    font-size: 12px;
+}
+.squad-description {
+    font-family: Montserrat;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.game {
+    width: 70px;
+    position: absolute;
+    right: 30px;
+}
+
+.video {
+    text-align: center;
+}
+
+.video video {
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-bottom: 50px;
 }

@@ -72,7 +72,7 @@
             <u><a href="https://t.me/kazgasu/1735" target="_blank">ПРО ЗАСЕЛЕНИЕ ЧИТАЙ ТУТ</a></u>
         </p>
         
-        <p style="padding-left: 10px; font-size: 14px; margin-bottom: 30px;">Все общежития находятся на одной объединённой территории, вход на которую осуществляется через КПП по пропускам(на карте ВХОД №3).</p>
+        <p class="monserat" style="padding-left: 10px; font-size: 14px; margin-bottom: 30px;">Все общежития находятся на одной объединённой территории, вход на которую осуществляется через КПП по пропускам(на карте ВХОД №3).</p>
         
         <div class="gift-box" onclick="changeInnerContent(this)">
             <div class="gift-image"></div>
@@ -320,10 +320,17 @@
                     <p>Не паникуй! Сейчас покажу, как за 2 клика найти своё расписание на <strong><a href="https://www.kgasu.ru/student/raspisanie-zanyatiy/" target="_blank" style="text-decoration: none; color: black;">сайте.</a></strong></p>
                 </span>
             </div>
+
+            <div class="video">
+                <video width="240" height="320" controls>
+                    <source src="./assets/video.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
         
         <h1 class="station-header">Молодец!</h1>
-        <h2 class="station-subtitle">Ты прошел квест с первой станцией и познакомился с инфраструктурой студгородка, так держать!</h2>
+        <h2 class="station-subtitle">Ты прошел всю станцию и узнал нужную информацию о корпусах и как в них ориентироваться!</h2>
     
         <div class="section opened-gift station2-gift" onclick="changeInnerContent(this)">
             <div class="icon-opened-gift">
@@ -798,7 +805,7 @@
         </div>
         
         <h1 class="station-header">Молодец!</h1>
-        <h2 class="station-subtitle">Ты прошел квест с первой станцией и познакомился с инфраструктурой студгородка, так держать!</h2>
+        <h2 class="station-subtitle">Ты прошел всю станцию.<br>Ешьте, учитесь, выживайте.<br>И пусть кофе будет крепче, а сессия короче!!</h2>
     
         <div class="section opened-gift station3-gift" onclick="changeInnerContent(this)">
             <div class="icon-opened-gift">
@@ -820,46 +827,365 @@
     
     <!-- Station 4 content -->
     <div id="station-4" class="station-page">
-        <button class="back-button" onclick="goToMainMenu()">← Назад к меню</button>
+        <button class="back-button" onclick="goToMainMenu()">←</button>
         
         <h1 class="station-header">Станция 4</h1>
-        <h2 class="station-subtitle">Студенческая жизнь</h2>
-        <p class="station-quote">"Студенчество - лучшие годы!"</p>
+        <h2 class="station-subtitle">Читалка и канцелярка</h2>
         
-        <p>Здесь вы узнаете о внеучебной деятельности и студенческой жизни.</p>
+        <div class="station-top-banner" style="margin-top: 20px;">
+            <span class="front">
+                <p>Читалка в универе и магазины с канцтоварами — основа студенческой жизни. Без них ни в конспекты вникнуть, ни лабы сделать.</p>
+            </span>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Информационно-образовательное пространство "15"</h3>
+
+            <div class="section-audience">
+                <p><strong>"15"(Пятнашка)</strong> - это современный читальный зал научно-технической библиотеки, в котором все приспособлено для максимально комфортной самостоятельной работы студентов: </p>
+                <ul>
+                    <li>в зале оборудованы <strong>150 рабочих мест</strong></li>
+                    <li>на каждом столе имеется <strong>розетка для работы с ноутбуком</strong></li>
+                    <li>в зале свободный <strong>доступ к Интернету через Wi-Fi</strong></li>
+                    <li><strong>удобные</strong> для поиска литературы <strong>книжные стеллажи.</strong></li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Пятнашка расположена в <strong>3 корпусе на 1 этаже</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/1246881881" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours"><strong>пн-пт: 08.30 до 19.00<br>сб: 08.30 до 17.00</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="" style="top: 240px;">
+            </div>
+
+            <div class="slider-container"  data-slider="slider1">
+                <div class="btn prev">
+                    <img src="./imgs/left-btn.png" alt="">
+                </div>
+                
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide" style="background-image: url('./imgs/slides/slide10-1.png')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide10-2.png')"></div>
+                        <div class="slide" style="background-image: url('./imgs/slides/slide10-3.png')"></div>
+                    </div>
+                </div>
+                
+                <div class="btn next">
+                    <img src="./imgs/right-btn.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section fact station4-fact" onclick="changeInnerContent(this)">
+            <div class="icon-fact">
+                <img src="./imgs/fact.png" alt="">
+            </div>
+            <p>Нажми,<br>чтобы узнать интересный факт</p>
+        </div>
         
-        <!-- Содержимое станции 4 будет добавлено позже -->
+        <div class="section">
+            <div class="lib-about-container">
+                <div class="images">
+                    <img class="image" src="./imgs/lib1.png" alt="">
+                    <img class="image" src="./imgs/lib2.png" alt="">
+                </div>
+                <div class="text">
+                    <p>Читалка в университете становится незаменимым пространством для студентов, особенно в периоды интенсивной учебы. Её главное преимущество — возможность полностью сосредоточиться на работе, избегая повседневных отвлечений. Тихая атмосфера, строгий порядок и доступ к необходимым ресурсам создают идеальные условия для глубокой погружённости в материал.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h4 class="section-subtitle">В нашем университете еще очень много классных образовательных центров!</h4>
+
+            <p class="station-quote" style="text-align: center;">
+                <u><a href="https://www.kgasu.ru/science/noc/" target="_blank" style="font-size: 18px;">ЧИТАЙ ТУТ</a></u>
+            </p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Канцтовары: мастхэв для учебы</h3>
+
+            <div class="info-block">
+                <p>Рассказываем, где и как закупиться всем, что превратит хаос учебы в организованный успех </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h4 class="section-subtitle">Бюрократос</h4>
+
+            <p>Небольшой магазин канцтоваров. Есть всё необходимое и недалеко от общежития. Также есть возможность печати.</p>
+
+            <div class="section-image">
+                <img src="./imgs/shop.png" alt="">
+            </div>
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Расположен в 5-7 минутах от общежития в сторону ул. Вишневского</strong></div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/1115031607" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>в будни с 09.00 до 20.00.<br>в выходные с 10.00 до 18.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="" style="top: 240px;">
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h4 class="section-subtitle">ОФИСМАГ</h4>
+
+            <p>Гипермаркет канцтоваров с огромным выбором. Находится в 20 минутах от общежития, но дорога до него доставит одно удовольствие!</p>
+
+            <div class="image-row">
+                <img src="./imgs/ofmag1.png" alt="">
+                <img src="./imgs/ofmag2.png" alt="">
+            </div>
+
+            <div class="info-block">
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/map-point.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="info-text">Расположен в 20 минутах от общежития</div>
+                </div>
+                
+                <a href="https://yandex.ru/maps/org/1115031607" target="_blank" class="map-link">
+                    <div class="icon"></div>
+                    <span>ПОСМОТРЕТЬ НА <span class="red-text">КАРТЕ</span></span>
+                </a>
+                
+                <div class="info-row">
+                    <div class="icon">
+                        <img src="./imgs/clock.png" style="width: 100%;" alt="">
+                    </div>
+                    <div class="hours">Работает <strong>ежедневно с 10.00 до 22.00.</strong></div>
+                </div>
+                
+                <img src="./imgs/clip.png" class="clip-img" alt="" style="top: 240px;">
+            </div>
+
+        </div>
         
-        <h1 class="congrats">Молодец!</h1>
-        <p class="station-quote">Ты прошел четвертую станцию и узнал о студенческой жизни!</p>
+        <h1 class="station-header">Молодец!</h1>
+        <h2 class="station-subtitle">Ты прошел всю станцию и узнал нужную информацию о корпусахи как в них ориентироваться!</h2>
+
+        <div class="section opened-gift station4-gift" onclick="changeInnerContent(this)">
+            <div class="icon-opened-gift">
+                <img src="./imgs/opened-gift.png" alt="">
+            </div>
+            <p><b>НАЖМИ</b> НА ПОДАРОК</p>
+        </div>
+
+        <h1 class="station-footer">Можешь смело переходить к станции 5</h1>
         
-        <p class="station-subtitle">Можешь смело переходить к станции 5</p>
-        
-        <button class="next-button" onclick="completeStation(4)">К следующей станции</button>
+        <div class="next-buttons">
+            <button class="next-button" onclick="completeStation(4)">
+                <span class="front">
+                    <p>К следующей станции</p>
+                </span>
+            </button>
+        </div>
     </div>
     
     <!-- Station 5 content -->
     <div id="station-5" class="station-page">
-        <button class="back-button" onclick="goToMainMenu()">← Назад к меню</button>
+        <button class="back-button" onclick="goToMainMenu()">←</button>
         
         <h1 class="station-header">Станция 5</h1>
-        <h2 class="station-subtitle">Стипендии и материальная поддержка</h2>
-        <p class="station-quote">"Учись хорошо - получай стипендию!"</p>
+        <h2 class="station-subtitle">Студенческие отряды</h2>
         
-        <p>Здесь вы узнаете о стипендиях и материальной поддержке студентов.</p>
+        <div class="station-top-banner" style="margin-top: 20px;">
+            <span class="front">
+                <p>Хочешь узнать, какие отряды существуют? Приготовься удивляться</p>
+            </span>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Студенческие отряды в КГАСУ</h3>
+
+            <div class="section-audience">
+                <p>Это уникальный шанс побывать в разных уголках нашей страны, и не только, возможность стать частью команды, расширить свой круг общения и обрести богатый опыт. Общая численность бойцов Штаба СО КГАСУ <strong>– 213 человек.<br>В КГАСУ есть 4 направления отрядов:</strong></p>
+                <ul>
+                    <li>строительные</li>
+                    <li>педагогические</li>
+                    <li>сервисные</li>
+                    <li>проводниковые</li>
+                </ul>
+            </div>
+        </div>
         
-        <!-- Содержимое станции 5 будет добавлено позже -->
+        <div class="section">
+            <div class="squad-card">
+                <h2 class="section-title squad-title">Студенческий строительный отряд «<span style="color: rgba(255, 97, 19, 1);">Казань</span>»</h2>
+                
+                <img class="squad-image" src="./imgs/squad1.png" alt="Отряд Казань">
+                
+                <p class="squad-description">
+                    2 месяца увлекательной работы в удалённых уголках нашей страны, с достойной зарплатой, закрытой летней практикой и возможностью трудоустроиться в госкорпорацию Росатом после выпуска – <strong>всё это про строительный отряд «Казань».</strong>
+                </p>
+                
+                <a href="https://vk.com/sso_kazan" class="squad-link">
+                    <img src="./imgs/vk-blue.png" class="link-icon"></img>
+                    <span class="link-text font-kz">Казань в VK</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="squad-card">
+                <h2 class="section-title squad-title">Студенческий строительный отряд «<span style="color: rgba(255, 97, 19, 1);">Ирбис</span>»</h2>
+                
+                <img class="squad-image" src="./imgs/irbis.png" alt="Отряд Ирбис">
+                
+                <p class="squad-description">
+                    Бойцы этого отряда проводят лето на трудовых строительных проектах в городах России. Наши ребята упорно трудятся в составе строителей и успешно справляются с задачами.
+                </p>
+                
+                <a href="https://vk.com/sso_irbis" class="squad-link">
+                    <img src="./imgs/vk-blue.png" class="link-icon"></img>
+                    <span class="link-text font-kz">Ирбис в VK</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="squad-card">
+                <h2 class="section-title squad-title">Студенческий женский строительный отряд «<span style="color: rgba(255, 97, 19, 1);">Алькор</span>»</h2>
+                
+                <img class="squad-image" src="./imgs/alkor.png" alt="Отряд Алькор">
+                
+                <p class="squad-description">
+                    Это первый женский строительный отряд! Прекрасные и сильные девушки получают бесценный опыт в сфере строительства, зарабатывают и путешествуют по разным городам России.
+                </p>
+                
+                <a href="https://vk.com/sso_alcor" class="squad-link">
+                    <img src="./imgs/vk-blue.png" class="link-icon"></img>
+                    <span class="link-text font-kz">Алькор в VK</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="squad-card">
+                <h2 class="section-title squad-title">Студенческий строительный отряд «<span style="color: rgba(255, 97, 19, 1);">ALTEA</span>»</h2>
+                
+                <img class="squad-image" src="./imgs/altea.png" alt="Отряд ALTEA">
+                
+                <p class="squad-description">
+                    За 2 месяца ребята в этом отряде получают опыт в различных сферах: от отдела планирования и технического обеспечения до работы в отделе кадров и бухгалтерии. Помимо достойной зарплаты, хорошего отдыха и приятных знакомств, бойцы получают возможность трудоустройства.
+                </p>
+                
+                <a href="https://vk.com/ssoaltea" class="squad-link">
+                    <img src="./imgs/vk-blue.png" class="link-icon"></img>
+                    <span class="link-text font-kz">ALTEA в VK</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="squad-card">
+                <h2 class="section-title squad-title">Студенческий педагогический отряд «<span style="color: rgba(255, 97, 19, 1);">Ignis</span>»</h2>
+                
+                <img class="squad-image" src="./imgs/Ignis.png" alt="Отряд Ignis">
+                
+                <p class="squad-description">
+                    Бойцы этого отряда – вожатые, которые работают летом в лагерях Республики Татарстан, Крым и Краснодарского Края. Хорошо ладите с детьми всех возрастов и знаете, как организовать для них запоминающееся и весёлое мероприятие? Тогда «Ignis» для вас!
+                </p>
+                
+                <a href="https://vk.com/spo_ignis" class="squad-link">
+                    <img src="./imgs/vk-blue.png" class="link-icon"></img>
+                    <span class="link-text font-kz">IGNIZ в VK</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="squad-card">
+                <h2 class="section-title squad-title">Студенческий сервисный отряд «<span style="color: rgba(255, 97, 19, 1);">БАРС</span>»</h2>
+                
+                <img class="squad-image" src="./imgs/bars.png" alt="Отряд БАРС">
+                
+                <p class="squad-description">
+                    Ребята этого отряда каждое лето трудятся в лучших отелях у Чёрного моря! Повара, официанты, бармены, хостес – всё это наши бойцы, которые отлично работают и так же отдыхают благодаря графику 2/2.
+                </p>
+                
+                <a href="https://vk.com/sservo_bars" class="squad-link">
+                    <img src="./imgs/vk-blue.png" class="link-icon"></img>
+                    <span class="link-text font-kz">БАРС в VK</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="squad-card">
+                <h2 class="section-title squad-title">Студенческий отряд проводников «<span style="color: rgba(255, 97, 19, 1);">Август</span>»</h2>
+                
+                <img class="squad-image" src="./imgs/avgust.png" alt="Отряд Август">
+                
+                <p class="squad-description">
+                    Бойцы отряда «Август» летом работают проводниками пассажирского вагона по направлениям Адлер, Анапа, Казань, Москва, Новороссийск и Санкт-Петербург. Отличный шанс заработать денег, насладиться романтикой поездов и попутешествовать.
+                </p>
+                
+                <a href="https://vk.com/sop_august" class="squad-link">
+                    <img src="./imgs/vk-blue.png" class="link-icon"></img>
+                    <span class="link-text font-kz">АВГУСТ в VK</span>
+                </a>
+            </div>
+        </div>
+
+        <h1 class="station-header" style="margin-top: 50px;">Молодец!</h1>
+        <h2 class="station-subtitle">Ты прошел всю станцию!<br>Теперь ты знаешь про все отряды и смело можешь выбирать тот, который тебе по душе!</h2>
+
+        <div class="section opened-gift">
+            <div class="icon-opened-gift">
+                <a href="https://telegra.ph/First-emergency-spisok-dlya-abiturientov-05-25" target="_blank"><img src="./imgs/opened-gift.png" alt=""></a>
+            </div>
+            <p><b>НАЖМИ</b> НА ПОДАРОК</p>
+        </div>
+
+        <h1 class="station-footer">Ого! Все станции пройдены!</h1>
         
-        <h1 class="congrats">Молодец!</h1>
-        <p class="station-quote">Ты прошел пятую станцию и узнал о стипендиях и материальной поддержке!</p>
-        
-        <p class="station-subtitle">Можешь смело переходить к станции 6</p>
-        
-        <button class="next-button" onclick="completeStation(5)">К следующей станции</button>
+        <div class="next-buttons">
+            <button class="next-button" onclick="window.location.href='/game'">
+                <span class="front">
+                    <p>ПЕРЕЙТИ К ИГРЕ</p>
+                </span>
+            </button>
+            <img class="game" src="./imgs/cube.png" alt="">
+        </div>
     </div>
-
-
-    <button onclick="window.location.href='/game'">Перейти к игре</button>
 
     <script>
 
@@ -1061,6 +1387,26 @@
                         <div class="receipt-image">
                             <img src="./imgs/receipt.png" alt="">    
                         </div> 
+                    </div>
+                `
+            }
+
+            if (element.className.includes('fact')) {
+                element.innerHTML = `
+                    <p class="title">Почему библиотека называется "Пятнашка"?</p>
+                    <p class="content">Все элементы интерьера, в том числе мебель, выстроены под углом 15 градусов, что позволяет расширить помещение, сделать его удобным для посещения большого количества людей (отсюда и название пространства "15").</b></p>
+                `
+            }
+
+            if (element.className.includes('station4-gift')) {
+                element.innerHTML = `
+                    <div class="copy">
+                        <div class="copy-title">Лови адреса копицентров рядом с универом.</div> 
+                        <ul >
+                            <li><a href="https://yandex.ru/maps/org/1098010280" target="_blank">ЦВЕТНОЙ</a></li>
+                            <li><a href="https://yandex.ru/maps/org/23366454746" target="_blank">Holland</a></li>
+                            <li><a href="https://yandex.ru/maps/org/1471180072" target="_blank">Копи Рум</a></li>
+                        </ul>
                     </div>
                 `
             }
