@@ -74,6 +74,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+.station-buttons {
+    margin-top: 40px;
+}
+
 .station-button, .next-button {
     border-radius: 45px;
     border: none;
