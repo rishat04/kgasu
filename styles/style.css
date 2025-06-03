@@ -767,7 +767,6 @@ li {
 }
 
 .info-block {
-    font-family: Arial, sans-serif;
     width: 100%;
     margin: 20px;
     padding: 15px;
@@ -790,7 +789,9 @@ li {
     justify-content: center;
 }
 .info-block .info-text {
-    line-height: 1.4;
+    line-height: 1.4 !important;
+    font-family: Montserrat !important;
+    font-weight: 400 !important;
 }
 .info-block .map-link {
     display: flex;
