@@ -187,7 +187,7 @@
 
     .landing .action-2 {
       position: absolute;
-      bottom: .2rem;
+      top: 1.4rem;
       width: 100%
     }
 
@@ -321,16 +321,20 @@
       margin: .8rem auto 0
     }
 
+    @font-face { font-family: KZ Supercell-Magic; src: url('../fonts/KZ Supercell-Magic.ttf'); } 
+    @font-face { font-family: RuneScape-ENA; src: url('../fonts/RuneScape-ENA.ttf'); } 
+
     .modal .over-score {
       /* margin-top: -.1.9rem; */
       font-size: .5rem;
+      font-family: KZ Supercell-Magic;
       color: #ff735c;
-      text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff
+      font-weight: 800;
     }
 
     .modal .tip {
-      font-size: .16rem;
-      color: #9b724e
+      font-size: .08rem;
+      font-family: Montserrat;
     }
 
     .modal .over-button-b {
@@ -377,7 +381,7 @@
             <div class="modal-main">
               <div id="over-modal" class="hide js-modal-card">
                 <div class="over-img"></div>
-                <div id="score" class="over-score font-wenxue"></div>
+                <div id="score" class="over-score"></div>
                 <div id="over-zero" class="hide">
                   <div class="tip">
                     <p style="color: #000;"><strong>ПОПРОБУЙ ЗАНОВО!</strong></p><img src="./assets/main-modal-again-b.png" class="over-button-b js-reload">
